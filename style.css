@@ -1,0 +1,443 @@
+/* The nav bar */
+span{
+    display: flex;
+    margin-right: 35px;
+    background-color: #ff2b74cd;
+    font-size: 19px;
+    
+}
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+/* navigation bar*/
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #1523ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: white;
+  z-index: 1000;
+}
+/* logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 34px;
+  width: 70px;
+  height: 65px;
+  
+}
+
+  
+/* heading */
+h1{
+    color: white;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin-bottom: 20px;
+  
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #00bcd4;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+}
+
+.content {
+  padding-top: 80px; /* Adjust for navbar height */
+}
+
+.content section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+/*
+/* Responsive design */
+/* Default (Desktop mode) */
+.menu-toggle {
+  display: none; /* Hide toggle in desktop mode */
+}
+
+/* Small screens (Mobile mode) */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex; /* Show toggle button on smaller screens */
+  }
+
+  .nav-links {
+    display: none; /* Hide nav links by default */
+    flex-direction: column;
+    gap: 10px;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 10px;
+  }
+
+  .nav-links.show {
+    display: flex; /* Show nav links when toggle is clicked */
+  }
+}
+
+/* the logos salvation church image */
+.image-container {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+}
+.image-container:hover img {
+  filter: brightness(70%);
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+.image-container:hover .text-overlay {
+  color: #00bcd4;
+  transform: translate(-50%, -50%) scale(1.1);
+  transition: all 0.3s ease;
+}
+
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0.5;
+  text-justify: center;
+  align-self: center;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  
+}
+/* the text on logos salvation church image*/
+.text-overlay {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  text-align: center;
+  margin-top: 60px;
+}
+
+.text-overlay h1 {
+  font-size: 4rem;
+  margin: 0;
+}
+
+.text-overlay p {
+  font-size: 1rem;
+  margin-top: 10px;
+  color: red;
+}
+/* branch edit */
+
+
+.tree {
+  text-align: center;
+}
+
+.headquarters {
+  position: relative;
+}
+
+.branches {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.branch {
+  position: relative;
+  text-align: center;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background-color: #00bcd4;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+}
+.circles {
+  width: 100%;
+  height: 100px;
+  background-color: #00bcd4;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+}
+
+.line {
+  width: 2px;
+  height: 50px;
+  background-color: #00bcd4;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* intro text */
+.intro-text {
+  color: #007BFF; /* Blue color */
+  font-size: 1.2rem; /* Slightly larger font for emphasis */
+  line-height: 1.6; /* Proper line spacing for readability */
+  text-align: center; /* Center the text */
+  margin: 20px 0; /* Add spacing around the text */
+}
+img{
+    width: 100%;
+    height: auto;
+}
+    .audio-container {
+      margin: 20px auto;
+    }
+    audio {
+      display: block;
+      margin: 0 auto;
+    }
+    a.download-link {
+      display: block;
+      margin-top: 10px;
+      color: #007bff;
+      text-decoration: none;
+    }
+    a.download-link:hover {
+      text-decoration: underline;
+    }
+    table {
+      width: 50%;
+      margin: 0 auto;
+      border-collapse: collapse;
+      text-align: left;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    footer {
+  background-color: black;
+  padding: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1 1 25%;
+  padding: 0 15px;
+  color: white;
+}
+
+.footer-section h4 {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.footer-section p {
+  margin: 5px 0;
+  color: white;
+}
+
+.footer-section a {
+  color: blue;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+  /* about us page */
+  .about-us {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.about-us h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.about-us p {
+  font-size: 20px;
+  color: #333;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.testy{
+    margin-top: 90px;
+    color: #8098ff;
+}
+/* General Page Styling */
+.contact-us {
+  padding: 50px 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.contact-us h1 {
+  text-align: center;
+  font-size: 36px;
+  color: #007bff;
+  margin-bottom: 40px;
+}
+
+/* Contact Information Section */
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.contact-section {
+  flex: 1 1 30%;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.contact-section p, .contact-section a {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.contact-section a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+/* Social Media Icons */
+.contact-section img {
+  margin: 5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.contact-section img:hover {
+  transform: scale(1.1);
+}
+
+/* Contact Form Section */
+.contact-form {
+  margin-top: 40px;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.contact-form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
